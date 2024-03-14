@@ -9,6 +9,11 @@
 		text="Say Hello"
 		press="onShowHello"
 	/>
-    <Label text="My Label" id="myLabel"  />
+    <Input
+		value="{/recipient/name}"
+		description="Hello {/recipient/name}"
+		valueLiveUpdate="true"
+		width="60%"
+	/>
     </Page>
 </mvc:View>
