@@ -7,12 +7,12 @@ sap.ui.define([
     function (Controller) {
         "use strict";
 
-        return Controller.extend("restinpeace.project1.controller.View9", {
+        return Controller.extend("restinpeace.project1.controller.Second", {
             onInit: function () {
 
             },
-            onPress:function(){
-                alert("Gaurav Testing");
+            onGoThird: function(){
+                this.getOwnerComponent().getRouter().navTo("Third");
             }
         });
     });

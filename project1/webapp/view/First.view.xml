@@ -1,0 +1,14 @@
+<mvc:View controllerName="restinpeace.project1.controller.First"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <!-- <Text text="This is <b style='font-weight: bold;'>bold</b> text." /> -->
+    <Button text="Go to Second View" press="onGoSecond"></Button>
+        <content />
+         <Button
+		text="Say Hello"
+		press="onShowHello"
+	/>
+    <Label text="My Label" id="myLabel"  />
+    </Page>
+</mvc:View>

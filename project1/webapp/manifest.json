@@ -78,20 +78,48 @@
       },
       "routes": [
         {
-          "name": "RouteView9",
+          "name": "RouteFirst",
           "pattern": ":?query:",
           "target": [
-            "TargetView9"
+            "TargetFirst"
+          ]
+        },
+        {
+          "name": "Second",
+          "pattern":"Second",
+          "target": [
+            "TargetSecond"
+          ]
+        },
+        {
+          "name": "Third",
+          "pattern":"Third",
+          "target": [
+            "TargetThird"
           ]
         }
       ],
       "targets": {
-        "TargetView9": {
+        "TargetFirst": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "View9",
-          "viewName": "View9"
+          "viewId": "First",
+          "viewName": "First"
+        },
+        "TargetSecond": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Second",
+          "viewName": "Second"
+        },
+        "TargetThird": {
+          "viewType": "XML",
+          "transition": "slide",
+          "clearControlAggregation": false,
+          "viewId": "Third",
+          "viewName": "Third"
         }
       }
     },
