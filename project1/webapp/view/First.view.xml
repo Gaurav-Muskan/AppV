@@ -5,7 +5,7 @@
     <customHeader>
         <Bar>
             <contentMiddle>
-                <Title text="I am First view" />
+                <Title text="I am First view" textAlign="Centre" width="100%"/>
             </contentMiddle>
         </Bar>
     </customHeader>
