@@ -5,7 +5,8 @@
     <customHeader>
         <Bar>
             <contentMiddle>
-                <Title text="I am First view" textAlign="Centre" width="100%"/>
+                <Title text="I am First view" style="text-align: center; width: 100%;" />
+                <Label text="Enter your Name" class="sapUiSmallMargin" />
             </contentMiddle>
         </Bar>
     </customHeader>
