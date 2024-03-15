@@ -1,19 +1,13 @@
 <mvc:View controllerName="restinpeace.project1.controller.First"
-    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
-    <!-- <Text text="This is <b style='font-weight: bold;'>bold</b> text." /> -->
-    <Button text="Go to Second View" press="onGoSecond"></Button>
-        <content />
-         <Button
-		text="Say Hello"
-		press="onShowHello"
-	/>
-    <Input
-		value="{/recipient/name}"
-		description="Hello {/recipient/name}"
-		valueLiveUpdate="true"
-		width="60%"
-	/>
-    </Page>
+  xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+  xmlns="sap.m">
+  <Page id="page" title="{i18n>title}">
+    <footer>
+      <Bar>
+        <contentMiddle>
+          <Button text="Go to Second View" press="onPress" type="Reject" />
+        </contentMiddle>
+      </Bar>
+    </footer>
+  </Page>
 </mvc:View>
