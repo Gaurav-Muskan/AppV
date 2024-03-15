@@ -2,6 +2,19 @@
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
     xmlns="sap.m">
     <Page id="" title="{i18n>title}">
-        <Button text="Go to third View" press="onGoThird"></Button>
+    <customHeader>
+        <Bar>
+            <contentMiddle>
+                <Title text="I am Second View" />
+            </contentMiddle>
+        </Bar>
+    </customHeader>
+        <footer>
+      <Bar>
+        <contentMiddle>
+          <Button text="Go to Third View" press="onGoThird" type="Emphasized" />
+        </contentMiddle>
+      </Bar>
+    </footer>
     </Page>
 </mvc:View>
