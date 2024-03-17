@@ -2,15 +2,16 @@
   xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
   xmlns="sap.m">
   <Page id="page" >
-    <customHeader>
-        <Bar>
-            <contentMiddle>
-                <Title text="I am First view" style="text-align: center; width: 100%;" />
-                <Label text="Enter your Name" class="sapUiSmallMargin" required="true" design="Bold"/>
-                <Input width="30%" value="Gaurav "></Input>
-            </contentMiddle>
-        </Bar>
-    </customHeader>
+    <content>
+    <Text text="I am First View." class="sapMH1FontSize">
+    </Text>
+    <Text id="idTxtMsg" text="Welcome to UI5." class="sapMH3FontSize" textAlign="Center" width="100%"></Text>
+    <Label id="idLblName" text="Enter your Name" class="sapUiSmalllMargin" required="true" design="Bold"></Label>
+    <Input id="idIpName" width="30%" placeholder="Enter Name" maxLength="20"></Input>
+    <Label id="idLblAlign" text="Enter Alignment" class="sapUiSmalllMargin" required="true" design="Bold"></Label>
+    <Input id="idIpAlign" width="30%" placeholder="Enter Alignment" maxLength="20"></Input>
+    <Button id="idBtnSubmit" text="Submit" press="OnSubmit" type="Emphasized"></Button>
+    </content>
     <footer>
       <Bar>
         <contentMiddle>
