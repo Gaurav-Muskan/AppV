@@ -6,7 +6,8 @@
         <Bar>
             <contentMiddle>
                 <Title text="I am First view" style="text-align: center; width: 100%;" />
-                <Label text="Enter your Name" class="sapUiSmallMargin" />
+                <Label text="Enter your Name" class="sapUiSmallMargin" required="true" design="Bold"/>
+                <Input width="30%" value="Gaurav "></Input>
             </contentMiddle>
         </Bar>
     </customHeader>
