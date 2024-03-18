@@ -3,19 +3,20 @@
   xmlns="sap.m">
   <Page id="page" >
     <content>
-    <Text text="I am First View." class="sapMH1FontSize">
+    <Text id="_IDGenText1" text="I am First View." class="sapMH1FontSize">
     </Text>
     <Text id="idTxtMsg" text="Welcome to UI5." class="sapMH3FontSize" textAlign="Center" width="100%"></Text>
-    <Label id="idLblName" text="Enter your Name" class="sapUiSmalllMargin" required="true" design="Bold"></Label>
+    <Label id="idLblName" text="Enter your Name" class="sapUiSmallMargin" required="true" design="Bold"></Label>
     <Input id="idIpName" width="30%" placeholder="Enter Name" maxLength="20"></Input>
-    <Label id="idLblAlign" text="Enter Alignment" class="sapUiSmalllMargin" required="true" design="Bold"></Label>
+    <Label id="idLblAlign" text="Enter Alignment" class="sapUiSmallMargin" required="true" design="Bold"></Label>
     <Input id="idIpAlign" width="30%" placeholder="Enter Alignment" maxLength="20"></Input>
+    <Button id="idBtnHideShow" text="Hide" press="onHideShow" type="Emphasized" ></Button>
     <Button id="idBtnSubmit" text="Submit" press="OnSubmit" type="Emphasized"></Button>
     </content>
     <footer>
-      <Bar>
+      <Bar id="_IDGenBar1" >
         <contentMiddle>
-          <Button text="Go to Second View" press="onGoSecond" type="Emphasized" />
+          <Button id="_IDGenButton1" text="Go to Second View" press="onGoSecond" type="Emphasized" />
         </contentMiddle>
       </Bar>
     </footer>
