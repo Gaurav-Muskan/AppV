@@ -14,6 +14,9 @@ sap.ui.define([
             var align=this.getView().byId("idIpAlign").getValue();
             this.getView().byId("idTxtMsg").setTextAlign(align);
             this.getView().byId("idTxtMsg").setText(msg);
+            //disable input field...
+            this.getView().byId("idIpName").setEnabled(false);
+            this.getView().byId("idIpAlign").setEnabled(false);
         },
         onGoSecond: function() {
             this.getOwnerComponent().getRouter().navTo("Second");
