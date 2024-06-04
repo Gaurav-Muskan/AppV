@@ -1,7 +1,19 @@
 <mvc:View controllerName="incture.project3.controller.First"
     xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
-    xmlns="sap.m">
+    xmlns="sap.m" xmlns:core="sap.ui.core">
     <Page id="page" title="{i18n>title}">
-        <content />
+        <content>
+            <ComboBox 
+                width="40%" 
+                class="sapUiTinyMarginEnd sapUiTinyMarginBottom" 
+                showSecondaryValues="true" 
+                selectedKey="{mLookupModel>/SelectedEmployees}" 
+                items="{mLookupModel>/aEmployeesGroupSet}"
+                value="{mLookupModel>/SelectedEmployees}"
+                change="onComboBoxChange"
+            >
+                <core:Item key="{mLookupModel>Employees}" text="{mLookupModel>Employees}" />
+            </ComboBox>
+        </content>
     </Page>
 </mvc:View>

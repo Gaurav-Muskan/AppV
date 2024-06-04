@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "incture.project3",
+    "id": "incture.com.project4",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.13.5",
-      "toolsId": "ef0d4c1a-6e3c-4e55-925f-da9a7614ac50"
+      "toolsId": "2ea175f2-88de-40c2-87d8-4bcb33df9c78"
     },
     "dataSources": {
       "mainService": {
@@ -22,13 +22,6 @@
         "settings": {
           "annotations": [],
           "localUri": "localService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      },
-      "NorthwindOData": {
-        "uri": "https://services.odata.org/v2/northwind/northwind.svc/",
-        "type": "OData",
-        "settings": {
           "odataVersion": "2.0"
         }
       }
@@ -51,7 +44,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": false,
+    "flexEnabled": true,
     "dependencies": {
       "minUI5Version": "1.124.0",
       "libs": {
@@ -73,26 +66,13 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "incture.project3.i18n.i18n"
+          "bundleName": "incture.com.project4.i18n.i18n"
         }
       },
       "": {
         "dataSource": "mainService",
         "preload": true,
         "settings": {}
-      },
-      "mLookupModel": {
-        "type": "sap.ui.model.json.JSONModel"
-      },
-      "NorthwindDataModel": {
-        "dataSource": "NorthwindOData",
-        "preload": true,
-        "settings": {
-          "metadataUrlParams": {
-            "sap-documentation": "heading"
-          },
-          "useBatch": false
-        }
       }
     },
     "resources": {
@@ -107,32 +87,32 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "incture.project3.view",
+        "viewPath": "incture.com.project4.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
       },
       "routes": [
         {
-          "name": "RouteFirst",
+          "name": "RouteView1",
           "pattern": ":?query:",
           "target": [
-            "TargetFirst"
+            "TargetView1"
           ]
         }
       ],
       "targets": {
-        "TargetFirst": {
+        "TargetView1": {
           "viewType": "XML",
           "transition": "slide",
           "clearControlAggregation": false,
-          "viewId": "First",
-          "viewName": "First"
+          "viewId": "View1",
+          "viewName": "View1"
         }
       }
     },
     "rootView": {
-      "viewName": "incture.project3.view.App",
+      "viewName": "incture.com.project4.view.App",
       "type": "XML",
       "async": true,
       "id": "App"
