@@ -1,7 +1,7 @@
 {
   "_version": "1.59.0",
   "sap.app": {
-    "id": "incture.project3",
+    "id": "com.incture.odataapp",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:basic",
       "version": "1.13.5",
-      "toolsId": "ef0d4c1a-6e3c-4e55-925f-da9a7614ac50"
+      "toolsId": "6cd8788e-0e3b-4e00-a60c-54ebfe707d8d"
     },
     "dataSources": {
       "mainService": {
@@ -22,13 +22,6 @@
         "settings": {
           "annotations": [],
           "localUri": "localService/metadata.xml",
-          "odataVersion": "2.0"
-        }
-      },
-      "NorthwindOData": {
-        "uri": "https://services.odata.org/v2/northwind/northwind.svc/",
-        "type": "OData",
-        "settings": {
           "odataVersion": "2.0"
         }
       }
@@ -53,7 +46,7 @@
   "sap.ui5": {
     "flexEnabled": false,
     "dependencies": {
-      "minUI5Version": "1.124.0",
+      "minUI5Version": "1.124.1",
       "libs": {
         "sap.m": {},
         "sap.ui.core": {},
@@ -73,26 +66,19 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "incture.project3.i18n.i18n"
+          "bundleName": "com.incture.odataapp.i18n.i18n"
         }
       },
       "": {
         "dataSource": "mainService",
         "preload": true,
-        "settings": {}
-      },
-      "mLookupModel": {
-        "type": "sap.ui.model.json.JSONModel"
-      },
-      "NorthwindDataModel": {
-        "dataSource": "NorthwindOData",
-        "preload": true,
         "settings": {
-          "metadataUrlParams": {
-            "sap-documentation": "heading"
-          },
-          "useBatch": false
+          "useBatch": true,
+          "defaultCountMode": "Inline"
         }
+      },
+      "jsonModel":{
+        "type": "sap.ui.model.json.JSONModel"
       }
     },
     "resources": {
@@ -107,7 +93,7 @@
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
         "async": true,
-        "viewPath": "incture.project3.view",
+        "viewPath": "com.incture.odataapp.view",
         "controlAggregation": "pages",
         "controlId": "app",
         "clearControlAggregation": false
@@ -132,7 +118,7 @@
       }
     },
     "rootView": {
-      "viewName": "incture.project3.view.App",
+      "viewName": "com.incture.odataapp.view.App",
       "type": "XML",
       "async": true,
       "id": "App"

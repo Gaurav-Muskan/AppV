@@ -1,35 +1,28 @@
-/**
- * eslint-disable @sap/ui5-jsdocs/no-jsdoc
- */
-
 sap.ui.define([
-        "sap/ui/core/UIComponent",
-        "sap/ui/Device",
-        "incture/project3/model/models"
-    ],
-    function (UIComponent, Device, models) {
-        "use strict";
+    "sap/ui/core/UIComponent",
+    "sap/ui/model/json/JSONModel",
+    "sap/ui/model/odata/v2/ODataModel"
+], function(UIComponent, JSONModel, ODataModel) {
+    "use strict";
 
-        return UIComponent.extend("incture.project3.Component", {
-            metadata: {
-                manifest: "json"
-            },
+    return UIComponent.extend("incture.project3.Component", {
+        metadata: {
+            manifest: "json"
+        },
 
-            /**
-             * The component is initialized by UI5 automatically during the startup of the app and calls the init method once.
-             * @public
-             * @override
-             */
-            init: function () {
-                // call the base component's init function
-                UIComponent.prototype.init.apply(this, arguments);
+        init: function() {
+            // call the base component's init function
+            UIComponent.prototype.init.apply(this, arguments);
 
-                // enable routing
-                this.getRouter().initialize();
+            // set up models
+            var oDataModel = new ODataModel(this.getMetadata().getManifestEntry("sap.app").dataSources.NorthwindOData.uri);
+            this.setModel(oDataModel, "NorthwindDataModel");
 
-                // set the device model
-                this.setModel(models.createDeviceModel(), "device");
-            }
-        });
-    }
-);
+            var mLookupModel = new JSONModel();
+            this.setModel(mLookupModel, "mLookupModel");
+
+            // create the views based on the url/hash
+            this.getRouter().initialize();
+        }
+    });
+});

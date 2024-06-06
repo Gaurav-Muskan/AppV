@@ -1,0 +1,47 @@
+<mvc:View
+    controllerName="com.incture.odataapp.controller.First"
+    xmlns:mvc="sap.ui.core.mvc"
+    displayBlock="true"
+    xmlns="sap.m"
+>
+    <Page
+        id="page"
+        title="{i18n>title}"
+    >
+        <content>
+            <!-- <List
+                id="idListEmp"
+                items="{path:'/Employees',filters:[{path:'LastName',operator:'EQ',value1:'Fuller'}]}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <items>
+                <StandardListItem description="{FirstName}" title="{Title}"></StandardListItem>
+                </items>
+            </List> -->
+            <!-- <List
+                id="idListEmp"
+                items="{jsonModel>/listData}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <items>
+                    <StandardListItem
+                        description="{jsonModel>Country}"
+                        title="{jsonModel>Address}"
+                    />
+                </items>
+            </List> -->
+            <List
+                id="idListEmp"
+                items="{path:'/Employees',sorter:[{path:'Country',descending:true}]}"
+                mode="SingleSelectMaster"
+                selectionChange="onSelEmp"
+            >
+                <items>
+                <StandardListItem description="{Country}" title="{Title}"></StandardListItem>
+                </items>
+            </List>
+        </content>
+    </Page>
+</mvc:View>
